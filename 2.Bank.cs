@@ -5,7 +5,6 @@ class BankAccount
     public int minus = 0;
     public void deposit(int available)
     {
-
         Console.Write("Enter the deposit amount : ");
         int deposit = Convert.ToInt32(Console.ReadLine());
         result = available + deposit;
