@@ -1,7 +1,7 @@
 using System;
 class BankAccount
 {
-    public int result;
+    public int result = 0;
     public void deposit(int available)
     {
 
@@ -43,16 +43,20 @@ class Program
         BankAccount ba = new BankAccount();
         Console.Write("Enter 1 for cash deposit or 2 for withdraw : ");
         int choice = Convert.ToInt32(Console.ReadLine());
-        
-            if (choice == 1)
-            {
+
+        switch (choice)
+        {
+            case 1:
                 sa.deposit(100);
-            }
-            if (choice == 2)
-            {
+                break;
+            case 2:
                 ba.withdraw(sa.result);
                 sa.withdraw(sa.result);
-            }
+                break;
+            default:
+                Console.WriteLine("Invalid choice. Please try again.");
+                break;
+
         }
-    
+    }
 }
