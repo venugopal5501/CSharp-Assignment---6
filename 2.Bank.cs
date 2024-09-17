@@ -2,6 +2,7 @@ using System;
 class BankAccount
 {
     public int result = 0;
+    public int minus = 0;
     public void deposit(int available)
     {
 
@@ -18,7 +19,7 @@ class BankAccount
         {
             Console.Write("Enter amount to withdraw : ");
             int withdraw = Convert.ToInt32(Console.ReadLine());
-            int minus = result - withdraw;
+            minus = result - withdraw;
             Console.WriteLine("Your Withdrawl process is completed");
             Console.WriteLine("Your available balance is : " + minus);
         }
@@ -31,7 +32,11 @@ class SavingsAccount : BankAccount
     {
         if (result < 1000)
         {
-            Console.Write("invalid Balance");
+            Console.WriteLine("invalid Balance");
+        }
+        if (result < 0)
+        {
+            Console.WriteLine("invalid Balance");
         }
     }
 }
@@ -41,21 +46,27 @@ class Program
     {
         SavingsAccount sa = new SavingsAccount();
         BankAccount ba = new BankAccount();
-        Console.Write("Enter 1 for cash deposit or 2 for withdraw : ");
+    l:
+        Console.Write("Enter 1 for cash deposit or 2 for withdraw or 0 to quit : ");
+
         int choice = Convert.ToInt32(Console.ReadLine());
 
         switch (choice)
         {
             case 1:
-                sa.deposit(100);
-                break;
+                sa.deposit(sa.result);
+                goto l;
             case 2:
                 ba.withdraw(sa.result);
                 sa.withdraw(sa.result);
+                goto l;
+            case 0:
+                Console.WriteLine("Thank You");
                 break;
+
             default:
                 Console.WriteLine("Invalid choice. Please try again.");
-                break;
+                goto l;
 
         }
     }

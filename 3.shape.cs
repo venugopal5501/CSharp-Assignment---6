@@ -22,7 +22,7 @@ class Circle : shape
     public Circle(double area, double radius)
     {
         this.area = area;
-        this.radius=radius;
+        this.radius = radius;
     }
 
     public override void getPerimeter()
@@ -34,8 +34,8 @@ class Circle : shape
 
     public override void getArea()
     {
-        double d=3.14*area*area;
-        Console.WriteLine("The Area of a circle is : " +d);
+        double d = 3.14 * area * area;
+        Console.WriteLine("The Area of a circle is : " + d);
 
     }
 }
