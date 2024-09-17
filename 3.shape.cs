@@ -10,7 +10,7 @@ class shape
     }
     public virtual void getArea()
     {
-
+        Console.Write("Area Calculation will be done here ");
     }
 }
 
