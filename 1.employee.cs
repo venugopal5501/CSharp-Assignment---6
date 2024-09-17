@@ -1,5 +1,4 @@
 using System;
-
 class Employee
 {
     public virtual void work()
@@ -17,11 +16,9 @@ class Employee
 }
 class HRManager : Employee
 {
-
     public override void work()
     {
         Console.WriteLine("Reschedule");
-
     }
     public virtual void addEmployee()
     {
@@ -37,13 +34,15 @@ class Program
     }
     public static void Main(string[] a)
     {
-        Employee em = new Employee();
+        // Employee em = new Employee();
         HRManager hr = new HRManager();
-        Employee emp = new HRManager();
-        em.work();
+        // Employee emp = new HRManager();
+        // em.work();
+        hr.work();
+        hr.getSalary();
         hr.addEmployee();
-        emp.work();
-        em.getSalary();
+        // emp.work();
+        // em.getSalary();
         demo();
     }
 }
