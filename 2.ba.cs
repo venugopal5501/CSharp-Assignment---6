@@ -24,7 +24,7 @@ class BankAccount
 
 class SavingsAccount : BankAccount
 {
-    public int minus = 1;
+    public int minus ;
     // public int ava;
     // public SavingsAccount(int ava)
     // {
@@ -33,13 +33,13 @@ class SavingsAccount : BankAccount
     // }
     public override void withdraw(int ava)
     {
-        if (ava >= 1000)
+        if (minus >= 1000)
         {
             Console.Write("Enter amount to withdraw : ");
             int withdraw = Convert.ToInt32(Console.ReadLine());
-            ava = ava - withdraw;
+            minus = ava - withdraw;
             Console.WriteLine("Your Withdrawl process is completed");
-            Console.WriteLine("Your available balance is : " + ava);
+            Console.WriteLine("Your available balance is : " + minus);
         }
 
         // withdraw(BankAccount.minus);
@@ -64,7 +64,7 @@ class SavingsAccount : BankAccount
 
             // BankAccount ba = new BankAccount();
             SavingsAccount sb = new SavingsAccount();
-            
+
 
 
         l:
@@ -81,7 +81,8 @@ class SavingsAccount : BankAccount
                 case 2:
                     // SavingsAccount sb = new SavingsAccount(ba.result);
                     // ba.withdraw(sa.result);
-                    sb.withdraw(sb.result);
+                    sb.minus=sb.result;
+                    sb.withdraw(sb.minus);
                     goto l;
 
                 case 0:
