@@ -1,8 +1,8 @@
 using System;
 class Vehicle
 {
-    private int make;
-    public int Make
+    private string make;
+    public string Make
     {
         get { return make; }
         set { make = value; }
@@ -25,17 +25,29 @@ class Vehicle
         get { return fuel; }
         set { fuel = value; }
     }
-    public virtual void FuelEfficiency()
+    public virtual int FuelEfficiency()
     {
+        Console.Write("Enter the distance traveled : ");
+        int a = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Enter How much fuel consume : ");
+        int b = Convert.ToInt32(Console.ReadLine());
+        int c = a / b;
+        return c;
 
     }
-    public virtual void DistanceTravelled()
+    public virtual int DistanceTravelled()
     {
+        Console.Write("Enter the speed: ");
+        int a = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Enter the time: ");
+        int b = Convert.ToInt32(Console.ReadLine());
+        int c = a * b;
+        return c;
 
     }
     public virtual void MaximumSpeed()
     {
-
+        Console.Write("The Maximum speed of truck is : 110km/h");
     }
 }
 
@@ -62,11 +74,11 @@ class Program
         Truck t = new Truck();
         Car c = new Car();
 
-        t.Make = 2010;
+        t.Make = "ford";
         t.Model = "Thar";
         t.Year = 2012;
         t.Fuel = "Petrol";
-        c.Make = 2010;
+        c.Make = "2010";
         c.Model = "Thar";
         c.Year = 2012;
         c.Fuel = "Petrol";
@@ -79,6 +91,13 @@ class Program
         Console.WriteLine(c.Model);
         Console.WriteLine(c.Year);
         Console.WriteLine(c.Fuel);
+
+        int FuelEfficiency = t.FuelEfficiency();
+
+        int DistanceTravelled = t.DistanceTravelled();
+        Console.WriteLine("Fule Efficiency for truck is : " + FuelEfficiency);
+        Console.WriteLine("The distance travelled by the truck is : " + DistanceTravelled);
+        t.MaximumSpeed();
     }
 }
 
