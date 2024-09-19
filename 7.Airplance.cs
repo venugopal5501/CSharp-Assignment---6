@@ -11,12 +11,12 @@ class Airplane
         int time = 7;
         int departuretime = Convert.ToInt32(Console.ReadLine());
         int delay = (time - departuretime);
-        Console.Write("Flight delay is : " + Math.Abs(delay) + " hr");
-        if (time == delay)
+        Console.WriteLine("Flight delay is : " + Math.Abs(delay) + " hr");
+        if (time == departuretime)
         {
             Console.WriteLine("Status : On- Time");
         }
-        else if (time < delay)
+        else if (time < departuretime)
         {
             Console.WriteLine("Status : Delayed");
         }
@@ -24,7 +24,6 @@ class Airplane
         {
             Console.WriteLine("Status : Cancelled");
         }
-
     }
 }
 class Program
