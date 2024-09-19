@@ -44,6 +44,5 @@ class Program
         c.speedUp();
         b.speedUp();
 
-
     }
 }
