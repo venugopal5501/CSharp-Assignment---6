@@ -15,7 +15,7 @@ class sum
             if (arr[i] > 100)
             {
                 Console.WriteLine("Please enter number between 1 to 100");
-                break;
+                i--;
             }
         }
         for (int i = 0; i < arr.Length; i++)
@@ -26,7 +26,15 @@ class sum
         Console.WriteLine();
         for (int i = 0; i < arr.Length; i++)
         {
-            sum = sum + arr[i];
+            if (arr[i] < 100)
+            {
+                sum = sum + arr[i];
+            }
+            else
+            {
+                break;
+            }
+
         }
         average = sum / length;
         Console.WriteLine("The sum is " + sum);

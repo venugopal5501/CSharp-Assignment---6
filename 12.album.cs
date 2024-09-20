@@ -69,7 +69,5 @@ class Program
         {
             Console.WriteLine("Thank you");
         }
-
-
     }
 }
