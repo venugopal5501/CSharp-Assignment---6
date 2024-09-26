@@ -22,8 +22,10 @@ class Program
                         count = 1;
 
                     }
+                    Console.WriteLine("{0}{1}", current, count);
+                Console.WriteLine("{0}{1}", t, count);
                 }
-                Console.WriteLine("{0}{1}", current, count);
+                
             }
             if (count == 1)
             {
