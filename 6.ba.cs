@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 class Bank
 {
-    public List<int, string> name = new Dictionary<int, string>();
+    public List<object> name = new List<object>();
     // public int accountnumber;
     public int removes;
     //public string names;
@@ -41,7 +41,7 @@ class Bank
         foreach (var acoount in name)
         {
 
-            Console.WriteLine(acoount.Key + " " + " " + acoount.Value);
+            Console.WriteLine(acoount + " " + " " + acoount.Value);
         }
     }
 }
@@ -135,9 +135,6 @@ class Program
 
 
         }
-
-
-
 
     }
 }
