@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-class Bank 
+class Bank
 {
-    public Dictionary<int, string> name = new Dictionary<int, string>();
+    public List<int, string> name = new Dictionary<int, string>();
     // public int accountnumber;
     public int removes;
     //public string names;
