@@ -1,28 +1,16 @@
+// Code on Assembly1
 using System;
-class add
-{
-    public int available = 0;
-    public int result = 0;
-    public void deposit()
-    {
-        int value = Convert.ToInt32(Console.ReadLine());
-        result = available + value;
-        Console.Write(result);
+
+namespace Assembly1 {
+    public class Greet {
+        protected internal string msg = "Hello"; // Accessible within the same assembly and derived classes
     }
-    public static void Main(string[] args)
-    {
-        add a = new add();
-l:
-            int choice = Convert.ToInt32(Console.ReadLine());
 
-            switch (choice)
-            {
-                case 1:
-                    a.deposit();
-                    goto l;
-
-
-            }
+    public class Program { // Changed to public to allow access from outside
+        static void Main(string[] args) {
+            Greet greet = new Greet();
+            Console.WriteLine(greet.msg); // This works because it's within the same assembly
+            Console.ReadLine();
         }
-
     }
+}

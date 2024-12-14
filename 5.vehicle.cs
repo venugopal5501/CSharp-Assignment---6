@@ -78,7 +78,7 @@ class Program
         t.Model = "Thar";
         t.Year = 2012;
         t.Fuel = "Petrol";
-        c.Make = "2010";
+        c.Make = "Truck";
         c.Model = "Thar";
         c.Year = 2012;
         c.Fuel = "Petrol";
